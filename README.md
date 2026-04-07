@@ -77,6 +77,12 @@ I recommend using **xscreensaver**.
 
 Features like this belong to the Windows 7 era. It's not required, but it matches the spirit of the setup better.
 
+### Use Drawer
+
+Another applet worth recommending is [Drawer (show/hide applets)](https://cinnamon-spices.linuxmint.com/applets/view/169). It helps keep the panel cleaner by letting you hide a group of applets and show them again with a mouse iteraction.
+
+This fits the Windows 7 vibe well, because on Windows it was common to keep tray icons collapsed instead of showing everything all the time..
+
 ## Scope and maintenance
 
 This repository is just a **rough** fix so people can use the theme again.
