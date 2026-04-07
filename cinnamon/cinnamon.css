@@ -2459,3 +2459,293 @@ The colour parameters are red, green, blue, and transparency or a name */
   padding-bottom: 4px;
   border-image: url('buttons/lock-hover.png') 4;
 }
+
+
+
+
+
+
+/* ===================================================================
+ * Windows 7 theme fixes for Cinnamon 22.x
+ * by Xalalau & GPT
+ * ===================================================================*/
+
+/* General spacing */
+
+button label {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+button image {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Better progress bars */
+.window-list-item-box .progress,
+.grouped-window-list-item-box .progress {
+  background-color: #22d42f;
+}
+
+/* Keep the screen backdrop visible behind modal dialogs */
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.46);
+}
+
+/* Compact grouped window list items */
+.grouped-window-list-item-box {
+  width: 50px;
+  spacing: 3px;
+}
+
+/* Current Cinnamon dialog buttons (Confirm / Yes-No / logout / shutdown) */
+.dialog-button-box {
+  spacing: 12px;
+}
+
+.dialog-button {
+  color: black;
+  border-image: url('buttons/button.png') 5;
+  font-size: 10pt;
+  text-align: center;
+  padding: 6px 26px 7px;
+  min-height: 18px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.dialog-button:hover {
+  border-image: url('buttons/button-hover.png') 5;
+}
+
+.dialog-button:focus,
+.dialog-button:default {
+  border-image: url('buttons/button-focused.png') 5;
+}
+
+.dialog-button:active,
+.dialog-button:checked {
+  border-image: url('buttons/button-focused-pressed.png') 5;
+}
+
+.dialog-button:destructive-action {
+  color: #a31515;
+}
+
+.dialog-button:destructive-action:hover,
+.dialog-button:destructive-action:focus,
+.dialog-button:destructive-action:default,
+.dialog-button:destructive-action:active {
+  color: #bf1b1b;
+}
+
+/* Windows 7-like end-session dialog. */
+.dialog.end-session-dialog {
+  font-size: 9.5pt;
+  border-radius: 2px;
+  background-color: #fff;
+  border-image: url('menu-assets/background.png') 8;
+  color: black;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  width: 46em;
+}
+
+.end-session-dialog .dialog-content-box {
+  spacing: 10px;
+}
+
+.end-session-dialog .message-dialog-title {
+  font-size: 12pt;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 6px;
+}
+
+.end-session-dialog .message-dialog-description {
+  font-size: 10pt;
+  color: #444444;
+  padding-bottom: 4px;
+}
+
+.end-session-dialog .dialog-list-title {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #5a5a5a;
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.end-session-dialog .dialog-list-scrollview {
+  max-height: 170px;
+}
+
+.end-session-dialog .dialog-list-item {
+  spacing: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.end-session-dialog .dialog-list-item-title {
+  font-size: 10pt;
+  color: #222222;
+}
+
+.end-session-dialog .dialog-list-item-description {
+  font-size: 8.5pt;
+  color: #555555;
+}
+
+.end-session-dialog .dialog-button-box {
+  spacing: 8px;
+  padding-top: 10px;
+}
+
+/* Smaller horizontal padding only in the shutdown/logout row so
+   the texts fit without making Yes/No dialogs tiny. */
+.end-session-dialog .dialog-button {
+  font-size: 9pt;
+  padding: 5px 10px 6px;
+  min-height: 20px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.end-session-dialog .dialog-button:destructive-action {
+  color: #b51515;
+}
+
+/* Better contrast for weak secondary text on white popups */
+.popup-menu-item:insensitive,
+.popup-inactive-menu-item,
+.popup-device-menu-item .popup-inactive-menu-item,
+.calendar-month-label,
+.calendar-events-main-box,
+.calendar-events-no-events-icon,
+.calendar-events-no-events-label,
+.calendar-events-date-label,
+.power-profile-item,
+.power-profile-item-label,
+.power-profile-label,
+.power-profile-subtitle,
+.device-battery-level,
+.device-battery-status,
+.battery-percentage,
+.battery-status,
+.battery-label,
+.power-applet-label,
+.popup-device-menu-item,
+.popup-device-menu-item StLabel {
+  color: #5f5f5f;
+}
+
+.calendar-other-month-day {
+  color: #858585;
+}
+
+.calendar-events-no-events-button:hover,
+.calendar-event-button:hover {
+  background-color: rgba(41,117,233,0.18);
+}
+
+.calendar-events-no-events-button:hover .calendar-events-no-events-icon,
+.calendar-events-no-events-button:hover .calendar-events-no-events-label,
+.calendar-event-button:hover .calendar-event-time-past,
+.calendar-event-button:hover .calendar-event-time-present,
+.calendar-event-button:hover .calendar-event-time-future,
+.calendar-event-button:hover .calendar-event-summary,
+.calendar-event-button:hover .calendar-event-countdown {
+  color: #1d1d1d;
+}
+
+/* Player overlay in the sound applet:
+   fix only the overlay background and text contrast. */
+.sound-player-overlay {
+  background-color: rgba(246, 248, 252, 0.90);
+}
+
+.sound-player-overlay StLabel,
+.sound-player-overlay StIcon {
+  color: #161616;
+  text-shadow: none;
+}
+
+.sound-player-overlay StButton,
+.sound-player-overlay StButton:hover,
+.sound-player-overlay StButton:focus,
+.sound-player-overlay StButton:active,
+.sound-player-overlay StButton:checked,
+.sound-player-overlay StButton:active:hover {
+  background-color: rgba(229, 233, 239, 0.96);
+}
+
+.sound-player-overlay StButton {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+}
+
+/* Corner Bar */
+
+.applet-cornerbar-box {
+  padding: 0;
+  margin: 0;
+  border-image: none;
+  background: transparent;
+}
+
+.applet-cornerbar-box:hover,
+.applet-cornerbar-box:active,
+.applet-cornerbar-box:checked,
+#panelRight .applet-cornerbar-box:hover,
+#panelRight .applet-cornerbar-box:active,
+#panelRight .applet-cornerbar-box:checked {
+  border-image: none;
+  background: transparent;
+}
+
+/* “Show desktop” Windows 7 style */
+.applet-cornerbar {
+  width: 14px;
+  min-width: 14px;
+  margin: 0;
+  padding: 0;
+
+  border-left: 1px solid rgba(255,255,255,0.30);
+  border-right: 1px solid rgba(0,0,0,0.35);
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,0.18);
+  background-gradient-end: rgba(255,255,255,0.04);
+
+  box-shadow: inset 1px 0 rgba(255,255,255,0.10);
+}
+
+/* hover/pressed with blue highlight */
+.applet-cornerbar-box:hover > .applet-cornerbar,
+.applet-cornerbar-box:active > .applet-cornerbar,
+.applet-cornerbar-box:checked > .applet-cornerbar {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(170, 220, 255, 0.34);
+  background-gradient-end: rgba(85, 150, 220, 0.12);
+
+  border-left: 1px solid rgba(255,255,255,0.50);
+  border-right: 1px solid rgba(90,140,190,0.65);
+
+  box-shadow: inset 0 0 4px rgba(255,255,255,0.22);
+}
+
+/* vertical panel support */
+.applet-cornerbar.vertical {
+  width: auto;
+  height: 14px;
+  min-height: 14px;
+
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid rgba(255,255,255,0.30);
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+}

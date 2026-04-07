@@ -2916,7 +2916,7 @@ UnityPanelWidget, .unity-panel {
 /* text widgets and the like base background color */
 @define-color theme_base_color #FFFFFF;
 /* base background color of selections */
-@define-color theme_selected_bg_color #CCE8FF;
+/* @define-color theme_selected_bg_color #CCE8FF; */
 /* text/foreground color of selections */
 @define-color theme_selected_fg_color #000000;
 /* base background color of insensitive widgets */
@@ -2934,7 +2934,7 @@ UnityPanelWidget, .unity-panel {
 /* text widgets and the like base background color on backdrop windows */
 @define-color theme_unfocused_base_color #FFFFFF;
 /* base background color of selections on backdrop windows */
-@define-color theme_unfocused_selected_bg_color #CCE8FF;
+/* @define-color theme_unfocused_selected_bg_color #CCE8FF; */
 /* text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color #000000;
 /* insensitive color on backdrop windows*/
@@ -2963,3 +2963,316 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#F0F0F0, 0.89);
 @define-color wm_button_active_color_c shade(#F0F0F0, 0.9);
 @define-color content_view_bg #FFFFFF;
+
+
+
+
+
+
+
+
+/* ===================================================================
+ * Windows 7 theme fixes for Cinnamon 22.x / GTK3
+ * by Xalalau & GPT
+ * ===================================================================*/
+
+/* New accent color so that the names of desktop icons don't become invisible. */
+@define-color theme_selected_bg_color #1f9ede;
+@define-color theme_unfocused_selected_bg_color #1f9ede;
+
+/* General button padding */
+
+button label {
+  padding: 4px;
+}
+
+button image {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Remove title button padding, so - [] x are next to each other */
+headerbar button image {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Better progress color contrast for levelbars */
+levelbar block { background-color: #a0d4ff; }
+
+/* Progress bar fixes */
+
+treeview.view.progressbar,
+treeview.view.progressbar:disabled,
+treeview.view.progressbar:selected,
+treeview.view.progressbar:selected:focus,
+treeview.view.progressbar:focus,
+treeview.view.progressbar:focus:selected,
+treeview.view.progressbar:focus:selected:focus,
+treeview.view.progressbar:disabled:selected,
+treeview.view.progressbar:backdrop,
+treeview.view.progressbar:selected:backdrop {
+  color: #000000;
+  border-radius: 0;
+  background-color: #18c43a;
+  background-image: none;
+}
+
+/* Better Nemo tree view spacing */
+.nemo-window .sidebar .cell {
+  padding-bottom: 2px;
+}
+
+/* Better Nemo file properties header spacing */
+.nemo-window treeview.view header button label,
+.nemo-window treeview header button label,
+.nemo-window treeview.view > header > button > label {
+  padding-left: 8px;
+}
+
+/* Window headerbar */
+
+headerbar.default-decoration,
+.titlebar.default-decoration {
+  min-height: 31px;
+}
+
+headerbar.default-decoration button.titlebutton,
+.titlebar.default-decoration button.titlebutton,
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
+  min-height: 31px;
+  box-shadow: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 31px 22px;
+}
+
+headerbar button.titlebutton.close,
+headerbar button.titlebutton.maximize,
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.close,
+.titlebar button.titlebutton.maximize,
+.titlebar button.titlebutton.minimize {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 31px 22px;
+  border-width: 0;
+  padding: 0;
+}
+
+headerbar.default-decoration button.titlebutton.close,
+.titlebar.default-decoration button.titlebutton.close {
+  min-width: 31px;
+  min-height: 22px;
+  background-size: 31px 22px;
+}
+
+headerbar.default-decoration button.titlebutton.maximize,
+headerbar.default-decoration button.titlebutton.minimize,
+.titlebar.default-decoration button.titlebutton.maximize,
+.titlebar.default-decoration button.titlebutton.minimize {
+  min-width: 31px;
+  min-height: 22px;
+  background-size: 31px 22px;
+}
+
+/* Titlebar buttons: keep assets crisp with original control spacing */
+headerbar.default-decoration button.titlebutton,
+.titlebar.default-decoration button.titlebutton,
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
+  min-width: 31px;
+  min-height: 22px;
+  padding: 0;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 31px 22px;
+  transition: none;
+}
+
+headerbar button.titlebutton.close,
+headerbar button.titlebutton.maximize,
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.close,
+.titlebar button.titlebutton.maximize,
+.titlebar button.titlebutton.minimize {
+  min-width: 31px;
+  min-height: 22px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 31px 22px;
+  transition: none;
+}
+
+headerbar button.titlebutton:backdrop,
+headerbar button.titlebutton:backdrop:hover,
+headerbar button.titlebutton:backdrop:active,
+headerbar button.titlebutton:backdrop:checked,
+.titlebar button.titlebutton:backdrop,
+.titlebar button.titlebutton:backdrop:hover,
+.titlebar button.titlebutton:backdrop:active,
+.titlebar button.titlebutton:backdrop:checked,
+headerbar.default-decoration button.titlebutton:backdrop,
+headerbar.default-decoration button.titlebutton:backdrop:hover,
+headerbar.default-decoration button.titlebutton:backdrop:active,
+headerbar.default-decoration button.titlebutton:backdrop:checked,
+.titlebar.default-decoration button.titlebutton:backdrop,
+.titlebar.default-decoration button.titlebutton:backdrop:hover,
+.titlebar.default-decoration button.titlebutton:backdrop:active,
+.titlebar.default-decoration button.titlebutton:backdrop:checked {
+  min-width: 31px;
+  min-height: 22px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 31px 22px;
+  transition: none;
+}
+
+/* translucid */
+/* Leaking to GTK4 👍 */
+
+headerbar,
+.titlebar,
+window.titlebar,
+window.ssd headerbar.titlebar,
+window.ssd .titlebar {
+  min-height: 32px;
+  padding: 0 8px;
+
+  /* só o fundo */
+  background-color: rgba(224, 232, 241, 0.92);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.26),
+    rgba(170, 205, 245, 0.08) 45%,
+    rgba(70, 105, 165, 0.10) 100%
+  );
+
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.18),
+    inset 0 -1px rgba(255, 255, 255, 0.03);
+}
+
+/* Unfocused window */
+headerbar:backdrop,
+.titlebar:backdrop,
+window.ssd headerbar.titlebar:backdrop,
+window.ssd .titlebar:backdrop {
+  background-color: rgba(181, 205, 209, 0.85);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08),
+    rgba(100, 110, 125, 0.05)
+  );
+
+  border-bottom-color: rgba(25, 35, 55, 0.22);
+}
+
+/* maximizada */
+window.maximized headerbar,
+window.maximized .titlebar {
+  border-radius: 0;
+}
+
+/* Headerbar utility buttons (search, menu, etc.): keep the outer
+ * button box untouched and add breathing room only to the inner icon/text.
+ */
+
+headerbar button:not(.titlebutton) image,
+.titlebar button:not(.titlebutton) image,
+headerbar menubutton button:not(.titlebutton) image,
+.titlebar menubutton button:not(.titlebutton) image,
+headerbar button:not(.titlebutton) label,
+.titlebar button:not(.titlebutton) label,
+headerbar menubutton button:not(.titlebutton) label,
+.titlebar menubutton button:not(.titlebutton) label {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/*
+ * - GtkScale vertical marks-before: image belongs on slider, not root
+ * - GtkTreeView CellRendererProgress: keep readable text when row selected
+*/
+
+/* GTK3 vertical scale with marks-before: the thumb asset must stay on the
+ * slider node. Applying it to the scale root makes the asset repeat behind
+ * mark labels/indicators and causes bogus hover feedback. */
+scale.vertical.marks-before,
+scale.vertical.marks-before:hover,
+scale.vertical.marks-before:disabled,
+scale.vertical.marks-before:disabled:backdrop,
+scale.vertical.marks-before:backdrop {
+  background-image: none;
+}
+
+scale.vertical.marks-before slider {
+  background-image: url("assets/slider-vert-left.png");
+}
+scale.vertical.marks-before slider:hover {
+  background-image: url("assets/slider-vert-left-hover.png");
+}
+scale.vertical.marks-before slider:disabled,
+scale.vertical.marks-before slider:disabled:backdrop,
+scale.vertical.marks-before slider:backdrop {
+  background-image: url("assets/slider-vert-left-insensitive.png");
+}
+
+/* Keep mark labels/ticks text-based and neutral. */
+scale marks,
+scale mark,
+scale indicator {
+  background-image: none;
+}
+
+/* GtkTreeView progress cells: do not swap fill/trough or text colors when
+ * the row is selected. */
+treeview.view.progressbar,
+treeview.view.progressbar:disabled,
+treeview.view.progressbar:focus,
+treeview.view.progressbar:backdrop {
+  color: #000000;
+  border-radius: 0;
+  border: none;
+  background-color: #06B025;
+  background-image: -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(0, 0, 0, 0.2)), to(transparent)) left no-repeat,
+                    -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(0, 0, 0, 0.2)), to(transparent)) right no-repeat,
+                    linear-gradient(to bottom, #cdffcd, #a6efb3 45%, #00d020 56%, #1ce233);
+  background-size: 40px 100%;
+  box-shadow: none;
+}
+
+treeview.view.progressbar:selected,
+treeview.view.progressbar:selected:focus,
+treeview.view.progressbar:focus:selected,
+treeview.view.progressbar:focus:selected:focus,
+treeview.view.progressbar:disabled:selected,
+treeview.view.progressbar:selected:backdrop {
+  color: #000000;
+  background-color: #18c43a;
+  background-image: radial-gradient(farthest-side at left, rgba(0, 0, 0, 0.16), transparent) left no-repeat,
+                    radial-gradient(farthest-side at right, rgba(0, 0, 0, 0.16), transparent) right no-repeat,
+                    linear-gradient(to bottom, #e0ffe0, #bef8c7 45%, #20db3d 56%, #42ef5a);
+  background-size: 40px 100%;
+  box-shadow: none;
+}
+
+/* GTK3 tree view fix selected line progress color */
+treeview.view.trough,
+treeview.view.trough:selected,
+treeview.view.trough:selected:focus,
+infobar treeview.view trough,
+row:selected treeview.view trough {
+  color: #000000;
+  background-color: #e9e9e9;
+  background-image: linear-gradient(to bottom, #f7f7f7, #e2e2e2);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}

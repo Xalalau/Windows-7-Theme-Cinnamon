@@ -1,17 +1,122 @@
-[![built-with-azurra-framework](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/badges/azurra/badge_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
+# Windows 7 Theme for Cinnamon 22.x
 
-# Windows 7
-Linux theme based on the apperance of Windows 7
+This repository is a pragmatic compatibility fix for the classic B00merang Windows 7 theme on modern Cinnamon 22.x / Linux Mint 22.x systems.
 
-### Preview
-![windows-7](https://b00merang-project.github.io/resources/screenshots/windows-7/blackcomb_1.png)
+It is **not** a full re-creation of Windows 7, and it is **not** intended to be a perfect visual clone. The goal is simpler: make this beautiful theme usable again on current Cinnamon, with fewer breakages and better day-to-day usability.
 
-### Supported platforms
-- Any GTK-based desktop
-- Cinnamon
-- Gnome
-- MATE
-- Xfce
+The point of this repo is to let people use the theme again without obvious visual problems, broken controls, unreadable text, or awkward spacing.
 
-### Manual installation
-Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
+## What this project is
+
+This repo provides fixes for the old Windows 7 theme setup so it behaves better on current Cinnamon and newer GTK3/GTK4 apps.
+
+It includes adjustments for things like:
+
+- Cinnamon Shell spacing and dialog styling
+- Progress bars and selected-row progress rendering
+- Better contrast for light popups and secondary text
+- Headerbar and title button fixes in GTK3 and GTK4
+- End-session dialog improvements
+- Sound applet overlay readability
+- A Windows 7-like corner bar / “Show desktop” strip
+- Small Nemo and general usability refinements
+
+A complete changelog is available below.
+
+## Supported platforms
+- Cinnamon 6.6+
+
+I have no idea what this topic has to do with other DEs.
+
+## Installation
+
+This theme is meant to be installed following the same overall process shown in the [OMG! Ubuntu guide for making Linux Mint look like Windows 7](https://www.omgubuntu.co.uk/2020/01/make-linux-mint-look-like-windows-7). That guide installs the original theme pack, icon pack, and related desktop tweaks.
+
+### 1. Install the fixed Windows 7 theme pack
+
+Download the [fixed Windows 7 theme pack](https://github.com/Xalalau/Windows-7-theme-cinnamon/archive/refs/heads/master.zip), extract it, and copy the extracted folder to your `~/.themes` directory. Then open Mint’s **Themes** settings and apply it to applications and desktop.
+
+### 2. Install the Windows 7 icon set
+
+Download the [original Windows 7 icon set](https://github.com/B00merang-Artwork/Windows-7/archive/master.zip) and extract it into your `~/.icons` directory, then select it in Mint’s **Themes** settings.
+
+### 3. Install **CinnVIIStarkMenu**
+
+This is important.
+
+The regular Cinnamon menu is **not supported well by this theme**. The setup depends on **CinnVIIStarkMenu** for a more appropriate Windows 7-style start menu experience. The same applet is also recommended in the original tutorial.
+
+In Cinnamon:
+
+- right-click the panel
+- open **Applets**
+- go to **Download**
+- search for **Start Menu**
+- install **CinnVIIStarkMenu**
+- add it to the panel
+
+### 4. Use a light theme variant
+
+This is also important.
+
+Use **light themes** and light theme combinations wherever possible. Dark variants tend to introduce visual inconsistencies, unreadable text, or mismatched assets. GIMP is a good example of a problematic application because it tends to come in dark mode (Flatpak) and immediately shows style errors.
+
+If you want the theme to look correct, stick to light setups.
+
+### 5. Optional finishing touches
+
+Set an [appropriate Windows 7 wallpaper](https://live.staticflickr.com/2685/4531929561_abf5cf4d71_o_d.jpg), which helps complete the overall look.
+
+## Recommended extras
+
+### Use `xscreensaver`
+
+I recommend using **xscreensaver**.
+
+Features like this belong to the Windows 7 era. It's not required, but it matches the spirit of the setup better.
+
+## Scope and maintenance
+
+This repository is just a **rough** fix so people can use the theme again.
+
+I am **not** planning to actively maintain this project.
+
+That means:
+
+- no long-term maintenance commitment
+- no promise of future compatibility updates
+- no active feature development
+- no PR review workflow
+- no effort toward polishing this into a “properly maintained” theme fork
+
+This repo exists because I wanted a working repair, not a new full-time project.
+
+## My changes so far
+
+### Fixed
+- Adjusted general button spacing to improve icon and label alignment in the Cinnamon Shell.
+- Improved progress bar colors in the panel and window list for better contrast and usability.
+- Wider grouped window list item sizing for a more Windows 7'ish layout.
+- Improved secondary text contrast in menus, calendar, power, and battery applets to avoid washed-out text on light backgrounds.
+- Fixed calendar event hover states to improve readability.
+- Improved the sound applet player overlay with a lighter background, clearer text, and better-sized control buttons.
+- Fixed titlebar button padding in both GTK3 and GTK4 so the `-`, `[]`, and `×` controls sit closer together and look better.
+- Fixed titlebar button sizing, spacing, and asset rendering in headerbars to preserve the crisp look of the original controls in GTK3 and GTK4.
+- Updated the selection/accent color so desktop icon labels no longer become unreadable.
+- Fixed TreeView and ColumnView progress rendering in GTK3 and GTK4 so selected rows no longer swap fill, trough, or text colors incorrectly.
+- Fixed GTK3 vertical scales using `marks-before` so slider assets no longer repeat incorrectly behind marks and labels.
+- Reduced horizontal padding only for shutdown/logout dialog buttons so longer labels fit better without making simpler confirmation dialogs look too small.
+
+### Improved
+- Restyled current Cinnamon dialog buttons such as confirm, yes/no, logout, and shutdown, with better hover, focus, pressed, and destructive-action states.
+- Reworked the end-session dialog to better match the Windows 7 visual style.
+- Enhanced the GTK3 translucent titlebar styling with clearer focused and unfocused states, bringing it closer to an Aero-like appearance.
+- Improved `levelbar` contrast in both GTK3 and GTK4.
+- Improved Nemo sidebar row spacing and file properties header spacing.
+
+### Added
+- Added a Windows 7-style corner bar for current Cinnamon / Mint 22.x, inspired by the original **Show desktop** strip.
+- Added subtle glass-like gradients and border lines to better mimic the original Windows 7 taskbar corner strip.
+
+## More media
+
