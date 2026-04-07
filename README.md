@@ -66,21 +66,21 @@ If you want the theme to look correct, stick to light setups.
 
 ### 5. Optional finishing touches
 
+#### Change the wallpaper
+
 Set an [appropriate Windows 7 wallpaper](https://live.staticflickr.com/2685/4531929561_abf5cf4d71_o_d.jpg), which helps complete the overall look.
 
-## Recommended extras
-
-### Use `xscreensaver`
+#### Use `xscreensaver`
 
 I recommend using **xscreensaver**.
 
 Features like this belong to the Windows 7 era. It's not required, but it matches the spirit of the setup better.
 
-### Use Drawer
+#### Use Drawer
 
 Another applet worth recommending is [Drawer (show/hide applets)](https://cinnamon-spices.linuxmint.com/applets/view/169). It helps keep the panel cleaner by letting you hide a group of applets and show them again with a mouse iteraction.
 
-This fits the Windows 7 vibe well, because on Windows it was common to keep tray icons collapsed instead of showing everything all the time..
+This fits the Windows 7 vibe well, as on Windows it's common to keep tray icons collapsed instead of showing everything all the time.
 
 ## Scope and maintenance
 
