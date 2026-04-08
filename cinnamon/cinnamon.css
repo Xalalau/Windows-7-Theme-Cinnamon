@@ -2551,6 +2551,14 @@ https://github.com/linuxmint/cinnamon-spices-applets
   spacing: 3px;
 }
 
+/* Proper default background for grouped-window-list thumbnails */
+.grouped-window-list-thumbnail-menu .item-box {
+  padding: 8px;
+  background-color: rgba(240,240,240,0.60);
+  border: 1px solid #273641;
+  border-radius: 4px;
+}
+
 /* ===================================================================
 * End session dialog
 * ===================================================================*/
