@@ -2535,6 +2535,9 @@ https://github.com/linuxmint/cinnamon-spices-applets
   color: #bf1b1b;
 }
 
+
+
+
 /* ===================================================================
 * Run dialog
 * ===================================================================*/
@@ -2554,22 +2557,34 @@ https://github.com/linuxmint/cinnamon-spices-applets
   background-color: #22d42f;
 }
 
-/* Wider grouped window list items */
-.grouped-window-list-item-box {
-  width: 64px;
-}
-
 /* Item boxes close together, like w7 */
 .grouped-window-list-box {
   spacing: 1px;
 }
 
+/* Wider grouped window list items */
+.grouped-window-list-item-box {
+  width: 64px;
+}
+
+/* Nice thumbnail padding */
+.grouped-window-list-thumbnail-menu StBoxLayout {
+  padding: 2px;
+}
+
 /* Proper default background for grouped-window-list thumbnails */
 .grouped-window-list-thumbnail-menu .item-box {
+  border-image: url('menu-assets/background.png') 8;
   padding: 8px;
-  background-color: rgba(240,240,240,0.60);
-  border: 1px solid #273641;
   border-radius: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+  border-image: url('menu-assets/background-hover.png') 8;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:selected {
+  border-image: url('menu-assets/background-hover.png') 8;
 }
 
 /* ===================================================================
