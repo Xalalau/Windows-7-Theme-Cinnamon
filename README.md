@@ -33,7 +33,7 @@ Download the [fixed Windows 7 theme pack](https://github.com/Xalalau/Windows-7-t
 
 ### 2. Install the Windows 7 icon set
 
-Download the [original Windows 7 icon set](https://github.com/B00merang-Artwork/Windows-7/archive/master.zip) and extract it into your `~/.icons` directory, then select it in Mint’s **Themes** settings.
+Download the [fixed Windows 7 icon set](https://github.com/Xalalau/Windows-7-Icons-Cinnamon/archive/refs/heads/master.zip) and extract it into your `~/.icons` directory, then select it in Mint’s **Themes** settings.
 
 ### 3. Install **CinnVIIStarkMenu**
 
