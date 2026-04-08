@@ -3006,7 +3006,7 @@ https://github.com/linuxmint/nemo/blob/master/gresources/nemo-style-application.
   padding-left: 8px;
 }
 
-/* Pathbar breadcrumbs no focus - better border*/
+/* Pathbar breadcrumbs no focus - stronger border */
 .nemo-window .path-bar button.text-button:backdrop {
   border-color: #7c7c7c;
 }
@@ -3022,6 +3022,15 @@ button label {
 button image {
   padding-left: 4px;
   padding-right: 4px;
+}
+
+/* ===================================================================
+* GtkStackSwitcher
+* ===================================================================*/
+
+/* stackswitcher button no focus - stronger border (the same used on Nemo) */
+window stackswitcher.stack-switcher button.text-button:checked:backdrop {
+  border-color: #8a6742;
 }
 
 /* ===================================================================
