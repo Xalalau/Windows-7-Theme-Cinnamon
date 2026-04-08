@@ -2554,10 +2554,14 @@ https://github.com/linuxmint/cinnamon-spices-applets
   background-color: #22d42f;
 }
 
-/* Compact grouped window list items */
+/* Wider grouped window list items */
 .grouped-window-list-item-box {
-  width: 50px;
-  spacing: 3px;
+  width: 64px;
+}
+
+/* Item boxes close together, like w7 */
+.grouped-window-list-box {
+  spacing: 1px;
 }
 
 /* Proper default background for grouped-window-list thumbnails */
