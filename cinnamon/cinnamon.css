@@ -2841,6 +2841,12 @@ https://github.com/linuxmint/cinnamon-spices-applets
   border: 7px solid transparent;
 }
 
+/* Add a much needed extra margin on the right panel options */
+.menu-category-button.starkmenu-quicklink-button,
+.menu-category-button-selected.starkmenu-quicklink-button-selected {
+    margin-right: 8px;
+}
+
 /* ==========================================================
  * CinnXP skin for Cinnamon appmenu
  * ========================================================== */
