@@ -2477,6 +2477,7 @@ The colour parameters are red, green, blue, and transparency or a name */
 
 /*
 https://github.com/linuxmint/mint-themes/blob/master/src/Mint-X/theme/Mint-X/cinnamon/cinnamon.css
+https://github.com/linuxmint/cinnamon/tree/master/files/usr/share/cinnamon/applets
 https://github.com/linuxmint/cinnamon/tree/master/data/theme/cinnamon-sass/widgets  
 https://github.com/linuxmint/cinnamon-spices-applets
 */
@@ -2830,6 +2831,150 @@ https://github.com/linuxmint/cinnamon-spices-applets
   border-right: 0;
   border-top: 1px solid rgba(255,255,255,0.30);
   border-bottom: 1px solid rgba(0,0,0,0.35);
+}
+
+/* ===================================================================
+* Workspace applet
+* ===================================================================*/
+
+/* applet container */
+.panel-top .workspace-switcher,
+.panel-bottom .workspace-switcher {
+    padding: 0 4px;
+    spacing: 2px;
+}
+
+/* numeric mode */
+.workspace-button {
+    min-width: 22px;
+    padding: 0 6px;
+    color: #f4f8ff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.9);
+
+    border: 1px solid rgba(13, 39, 73, 0.95);
+    border-top-color: rgba(176, 219, 255, 0.90);
+    border-left-color: rgba(140, 194, 245, 0.85);
+    border-radius: 2px;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(105, 158, 222, 0.58);
+    background-gradient-end: rgba(33, 83, 145, 0.62);
+}
+
+.workspace-button.vertical {
+    min-height: 22px;
+    padding: 4px 0;
+}
+
+.workspace-button:hover {
+    color: #ffffff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(153, 203, 255, 0.78);
+    background-gradient-end: rgba(59, 119, 194, 0.82);
+}
+
+.workspace-button:outlined {
+    color: #081c34;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.55);
+
+    border: 1px solid rgba(29, 76, 128, 0.98);
+    border-top-color: rgba(240, 249, 255, 0.98);
+    border-left-color: rgba(206, 230, 255, 0.95);
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(232, 244, 255, 0.96);
+    background-gradient-end: rgba(128, 179, 235, 0.96);
+}
+
+.workspace-button:outlined:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(245, 251, 255, 0.98);
+    background-gradient-end: rgba(152, 196, 241, 0.98);
+}
+
+.workspace-button:shaded {
+    color: rgba(255,255,255,0.72);
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(52, 77, 110, 0.52);
+    background-gradient-end: rgba(22, 42, 69, 0.58);
+}
+
+/* visual mode */
+.workspace-graph {
+    padding: 3px;
+    spacing: 3px;
+}
+
+.workspace-graph .workspace {
+    border: 1px solid rgba(172, 214, 255, 0.35);
+    border-radius: 2px;
+    background-color: rgba(17, 42, 74, 0.45);
+}
+
+.workspace-graph .workspace:hover {
+    background-color: rgba(39, 80, 128, 0.42);
+}
+
+.workspace-graph .workspace:active {
+    border-color: #9ed1ff;
+    background-color: rgba(80, 131, 197, 0.35);
+}
+
+.workspace-graph .workspace .windows {
+    -active-window-background: rgba(220, 238, 255, 0.42);
+    -active-window-border: rgba(255, 255, 255, 0.75);
+    -inactive-window-background: rgba(255, 255, 255, 0.18);
+    -inactive-window-border: rgba(210, 230, 255, 0.28);
+}
+
+/* workspace change popup */
+.workspace-switch-osd {
+    min-width: 140px;
+    margin-bottom: 18px;
+    padding: 8px 20px 0 20px;
+
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.95);
+
+    border: 1px solid rgba(9, 36, 67, 0.96);
+    border-top-color: rgba(215, 236, 255, 0.92);
+    border-left-color: rgba(163, 204, 245, 0.88);
+    border-radius: 7px;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(126, 178, 235, 0.96);
+    background-gradient-end: rgba(40, 92, 154, 0.97);
+}
+
+.workspace-switch-osd-indicator-box {
+    spacing: 8px;
+}
+
+.workspace-switch-osd-indicator {
+    background-color: rgba(255,255,255,0.45);
+    padding: 3px;
+    margin: 10px;
+    border-radius: 16px;
+}
+
+.workspace-switch-osd-indicator:active {
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 8px;
+}
+
+/* expo thumbnails: remove hard black fallback */
+.expo-workspace-thumbnail-frame {
+    border: 1px solid rgba(17, 47, 84, 0.96);
+    border-radius: 2px;
+    background-color: rgba(18, 47, 83, 0.30);
+}
+
+.expo-workspace-thumbnail-frame#active {
+    border: 1px solid #9ed1ff;
+    background-color: rgba(78, 132, 203, 0.42);
 }
 
 /* ===================================================================
