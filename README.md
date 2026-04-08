@@ -1,6 +1,6 @@
 # Windows 7 Theme for Cinnamon 22.x
 
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-07-30" src="https://github.com/user-attachments/assets/fb405725-4bb5-4638-bf5b-e271f906550f" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-18-43" src="https://github.com/user-attachments/assets/5baf4c9c-254f-4fba-ad2b-d17fcc0b7188" />
 
 This repository is a pragmatic and somewhat dirty compatibility fix (by me and GPT) for the classic B00merang Windows 7 theme on modern Cinnamon 6.x / Linux Mint 22.x / GTK3 / GTK4 code.
 
@@ -105,10 +105,12 @@ This repo exists because I wanted a working repair, not a new full-time project.
 ## More media
 
 <img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-15-51" src="https://github.com/user-attachments/assets/be054488-b189-474c-8b56-62f1e00cdd81" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-14-55" src="https://github.com/user-attachments/assets/c194a4fa-41df-4e24-859f-d715d801b65b" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-07-12" src="https://github.com/user-attachments/assets/51262b3f-d060-4c2f-80ac-f17343a335dc" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-06-15" src="https://github.com/user-attachments/assets/c6a5fe7f-b801-4c1f-b864-0795758f320d" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-05-24" src="https://github.com/user-attachments/assets/6abf26d2-e9b9-4bcf-8c2e-c05cccd1db10" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-04-00" src="https://github.com/user-attachments/assets/2583a23f-3d34-4005-87df-54f04ecedbe0" />
-<img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-02-48" src="https://github.com/user-attachments/assets/d9405dfb-7875-4370-8f20-e161a0a1badf" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-25-43" src="https://github.com/user-attachments/assets/01822219-dfea-4ca5-b380-3a9826b56d54" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-19-09" src="https://github.com/user-attachments/assets/b54e3769-6aaf-4dd8-ba66-34d06340f797" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-20-06" src="https://github.com/user-attachments/assets/034edf25-387d-495b-a0cf-4071a3a15886" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-24-30" src="https://github.com/user-attachments/assets/bc93bf1f-bfbe-42c3-b8e0-149b4749f3e2" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-22-14" src="https://github.com/user-attachments/assets/c9b4c7d8-b3c7-4993-94da-c41ed7fb6a9d" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-21-32" src="https://github.com/user-attachments/assets/c6b163e3-8a2d-439c-9137-7766a4f275df" />
+<img width="1920" height="1080" alt="Screenshot from 2026-04-08 07-20-34" src="https://github.com/user-attachments/assets/7d2b7f05-eadf-4424-9ccc-1fcb5c4a118e" />
+
 
