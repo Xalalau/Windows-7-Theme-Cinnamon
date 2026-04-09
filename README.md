@@ -31,6 +31,8 @@ This theme is meant to be installed following the same overall process shown in 
 
 Download the [fixed Windows 7 theme pack](https://github.com/Xalalau/Windows-7-theme-cinnamon/archive/refs/heads/master.zip), extract it, and copy the extracted folder to your `~/.themes` directory. Then open Mint’s **Themes** settings and apply it to applications and desktop.
 
+If you prefer, the theme mixes very well with [Windows 11 icons](https://github.com/yeyushengfan258/Win11-icon-theme).
+
 ### 2. Install the Windows 7 icon set
 
 Download the [fixed Windows 7 icon set](https://github.com/Xalalau/Windows-7-Icons-Cinnamon/archive/refs/heads/master.zip) and extract it into your `~/.icons` directory, then select it in Mint’s **Themes** settings.
