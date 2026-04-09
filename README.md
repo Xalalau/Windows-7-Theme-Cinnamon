@@ -104,6 +104,10 @@ That means:
 
 This repo exists because I wanted a working repair, not a new full-time project.
 
+## Known issues
+
+- Nemo's file preview uses a separate window that does not integrate cleanly with the active theme. Any attempt to force white text there, such as ``window.background label { color: #ffffff; }``, ends up affecting unrelated parts of the OS as well. The only clean way to do it globally would be to explicitly redefine the exact color of labels across the entire system, and I'm not going to do that.
+
 ## More media
 
 <img width="1920" height="1080" alt="Captura de tela de 2026-04-06 22-15-51" src="https://github.com/user-attachments/assets/be054488-b189-474c-8b56-62f1e00cdd81" />
