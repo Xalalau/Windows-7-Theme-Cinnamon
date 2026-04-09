@@ -3189,21 +3189,57 @@ https://github.com/linuxmint/cinnamon-spices-applets
 }
 
 /* ==========================================================
- * CinnXP skin for Cinnamon appmenu
+ * Win7/Aero-ish skin for Cinnamon appmenu
  * ========================================================== */
 
+/* ---------------------------------
+ * Sidebar icons: contraste e presença
+ * --------------------------------- */
+.appmenu-sidebar-button {
+  spacing: 10px;
+  padding: 7px 10px;
+  min-height: 30px;
+}
+
+.appmenu-sidebar-button StIcon {
+  icon-size: 16px;
+  color: #eef5fc;
+  opacity: 1;
+  icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.55);
+}
+
+.appmenu-sidebar-button:hover StIcon,
+.appmenu-sidebar-button:selected StIcon,
+.appmenu-sidebar-button:focus StIcon {
+  color: #eef5fc;
+  opacity: 1;
+  icon-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+}
+
 .appmenu-background {
-  color: #ffffff;
+  color: #1f1f1f;
   -boxpointer-gap: -1px;
-  -arrow-border-radius: 16px;
+  -arrow-border-radius: 14px;
   -arrow-base: 0px;
   -arrow-rise: -1px;
-  background-color: transparent;
+
+  background-color: rgba(236, 242, 249, 0.96);
+  border: 1px solid rgba(84, 112, 145, 0.95);
+  border-radius: 8px 8px 0 0;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.55) inset,
+    0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* use isso só se o PNG realmente ajudar.
+   Se ele continuar com cara de XP, remova completamente. */
+/*
+.appmenu-background {
   border: 8px solid transparent;
   border-image: url("menu-assets/menu-bg.png") 8;
-  box-shadow: 16px -5px 20px 10px rgba(0, 0, 0, 0.40);
-  border-radius: 6px 6px 0 0;
 }
+*/
 
 .appmenu-background .popup-menu-content {
   padding: 0;
@@ -3217,53 +3253,64 @@ https://github.com/linuxmint/cinnamon-spices-applets
 }
 
 /* -----------------------------
- * Sidebar XP
+ * Sidebar estilo Win7
  * ----------------------------- */
 .appmenu-sidebar {
   padding: 10px 0 8px 0;
   spacing: 0;
-  color: #ffffff;
+  color: #f4f8fc;
+
   background-gradient-direction: vertical;
-  background-gradient-start: #1b3c77;
-  background-gradient-end: #3b7bc0;
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 6px 0 0 0;
+  background-gradient-start: #2b4d74;
+  background-gradient-end: #5f82ab;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset -1px 0 0 rgba(55, 76, 98, 0.35);
+  border-radius: 8px 0 0 0;
 }
 
 .appmenu-sidebar-user-box {
   padding: 8px 10px 10px 10px;
   margin: 0 8px 8px 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .appmenu-sidebar-user-box .user-widget-label,
 .appmenu-sidebar .user-widget-label {
   color: #ffffff;
   font-weight: bold;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
 }
 
-/* Avatar */
+/* Avatar menos XP, mais neutro */
 .appmenu-sidebar-user-box .user-icon {
-  border-radius: 12px;
-  border: 7px solid transparent;
-  border-image: url("menu-assets/box2.png") 6;
-  padding: 6px;
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.20) inset,
+    0 0 0 1px rgba(0, 0, 0, 0.18);
 }
 
 /* -----------------------------
- * Main painel
+ * Painel principal
  * ----------------------------- */
 .appmenu-right-box {
   spacing: 8px;
   padding: 10px;
-  color: #000000;
-  background-color: #f1f1f1;
-  border-radius: 0 6px 0 0;
+  color: #1f1f1f;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: #f7f9fc;
+  background-gradient-end: #e9eef4;
+
+  border-radius: 0 8px 0 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 .appmenu-categories-applications-box {
-  spacing: 12px;
+  spacing: 10px;
 }
 
 .appmenu-applications-box {
@@ -3275,60 +3322,79 @@ https://github.com/linuxmint/cinnamon-spices-applets
  * ----------------------------- */
 .appmenu-search-box {
   spacing: 8px;
-  padding: 0 0 6px 0;
+  padding: 6px 0 2px 0;
 }
 
 #appmenu-search-entry {
   min-height: 28px;
-  padding: 4px 8px;
-  color: #000000;
+  padding: 4px 9px;
+  color: #1a1a1a;
   background-color: #ffffff;
-  border: 2px inset #c7c7c7;
+
+  border: 1px solid #9eb6ce;
   border-radius: 4px;
-  caret-color: #000000;
+
+  caret-color: #111111;
   selected-color: #ffffff;
-  selection-background-color: #2a63b6;
+  selection-background-color: #3d7cc9;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+#appmenu-search-entry:focus {
+  border: 1px solid #6ea6de;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(170, 210, 245, 0.9);
 }
 
 .appmenu-search-entry-icon {
   icon-size: 18px;
-  color: #49617f;
+  color: #5b6f84;
 }
 
 /* -----------------------------
- * Favorites / sidebar
+ * Sidebar buttons / favorites
  * ----------------------------- */
 .appmenu-sidebar-button {
   spacing: 8px;
-  color: #ffffff;
+  color: #f4f8fc;
   margin: 0 8px;
   padding: 6px 8px;
+
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: transparent;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.30);
 }
 
 .appmenu-sidebar-button:hover,
 .appmenu-sidebar-button:selected,
 .appmenu-sidebar-button:focus {
-  color: #0b0b0b;
+  color: #0d1a26;
+
   background-gradient-direction: vertical;
-  background-gradient-start: #dce8f5;
-  background-gradient-end: #aebfd4;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45),
-              inset 0 -1px 0 rgba(60, 90, 120, 0.28);
+  background-gradient-start: rgba(241, 247, 255, 0.95);
+  background-gradient-end: rgba(196, 222, 247, 0.95);
+
+  border: 1px solid rgba(109, 145, 186, 0.95);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 0 0 1px rgba(255, 255, 255, 0.18);
+
   text-shadow: none;
 }
 
 .appmenu-sidebar-button:hover StIcon,
 .appmenu-sidebar-button:selected StIcon,
 .appmenu-sidebar-button:focus StIcon {
-  color: #0b0b0b;
+  color: #102030;
 }
 
 /* -----------------------------
- * Categories & programs
+ * Categories & applications
  * ----------------------------- */
 .appmenu-category-button,
 .appmenu-application-button,
@@ -3336,49 +3402,57 @@ https://github.com/linuxmint/cinnamon-spices-applets
 .appmenu-category-button-selected,
 .appmenu-category-button-greyed {
   spacing: 8px;
-  padding: 4px 6px;
+  padding: 5px 7px;
+
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: transparent;
+  color: #1f1f1f;
 }
 
 .appmenu-category-button:hover,
 .appmenu-application-button:hover,
 .appmenu-application-button-selected,
 .appmenu-category-button-selected {
-  color: #000000;
+  color: #111111;
+
   background-gradient-direction: vertical;
-  background-gradient-start: #f3f7fb;
-  background-gradient-end: #dbe5f0;
-  border: 1px solid #b7c7d8;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  background-gradient-start: #f7fbff;
+  background-gradient-end: #d7ebff;
+
+  border: 1px solid #8db2d8;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 0 0 1px rgba(255, 255, 255, 0.55);
+
   text-shadow: none;
 }
 
 .appmenu-category-button-label,
 .appmenu-application-button-label {
   padding: 0;
+  color: inherit;
 }
 
 .appmenu-category-button:hover StIcon,
 .appmenu-application-button:hover StIcon,
 .appmenu-application-button-selected StIcon,
 .appmenu-category-button-selected StIcon {
-  color: #000000;
+  color: #111111;
 }
 
 .appmenu-application-button-description {
-  color: #8aa3b9;
-  font-size: 0.9em;
+  color: #5e6b78;
+  font-size: 0.92em;
 }
 
 .appmenu-application-button:hover .appmenu-application-button-description,
 .appmenu-application-button-selected .appmenu-application-button-description {
-  color: #5e768d;
+  color: #43515e;
 }
 
 .appmenu-category-button-greyed {
-  color: #8c8c8c;
+  color: #8a8f96;
   font-style: italic;
 }
 
@@ -3386,33 +3460,19 @@ https://github.com/linuxmint/cinnamon-spices-applets
   opacity: 0.5;
 }
 
-/* -----------------------------
- * Manage machine
- * ----------------------------- */
-.appmenu-system-box {
-  spacing: 8px;
-  padding: 6px 10px 10px 10px;
+/* Scroll area: mais discreta */
+StScrollBar StBin#trough {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
 }
 
-.appmenu-system-button {
-  min-width: 24px;
-  min-height: 24px;
-  padding: 3px 0 3px 7px;
-  border: 1px solid #6e8fb3;
-  border-radius: 4px;
-  border-image: none;
-  background-gradient-direction: vertical;
-  background-gradient-start: #6f9fd3;
-  background-gradient-end: #3f6fa8;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.35),
-              inset -1px -1px 0 rgba(0, 0, 0, 0.18);
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+  background-color: rgba(120, 140, 165, 0.65);
+  border-radius: 6px;
 }
 
-.appmenu-system-button:hover,
-.appmenu-system-button:focus,
-.appmenu-system-button:selected {
-  background-gradient-direction: vertical;
-  background-gradient-start: #88b2de;
-  background-gradient-end: #4f80bb;
-  border: 1px solid #7da2cb;
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+  background-color: rgba(95, 120, 150, 0.85);
 }
