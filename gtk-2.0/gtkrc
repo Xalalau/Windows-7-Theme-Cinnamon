@@ -520,3 +520,77 @@ class "*Xfce*Panel*"					style "panelbg"
 # Nautilus sidebar
 #widget_class "*Nautilus*Places*Sidebar*"    		style "nautilus-sidebar"
 #widget_class "*Nautilus*Side*.GtkWidget"    		style "nautilus-sidebar"
+
+
+
+
+
+
+
+
+
+/* ===================================================================
+ * Windows 7 theme fixes for GTK2
+ * by Xalalau & GPT
+ * ===================================================================*/
+
+# -------------------------------
+# GTK2 file chooser overrides
+# -------------------------------
+
+# Give the breadcrumb/path buttons more horizontal breathing room
+style "fc_path_button" = "button"
+{
+  xthickness = 8
+  ythickness = 2
+
+  GtkButton::default_border = { 0, 0, 0, 0 }
+  GtkButton::default_outside_border = { 0, 0, 0, 0 }
+  GtkButton::child-displacement-x = 0
+  GtkButton::child-displacement-y = 0
+}
+
+# Flatten the file/folder list area inside GTK2 file chooser dialogs
+style "fc_flat_treeview" = "default"
+{
+  xthickness = 1
+  ythickness = 1
+
+  base[NORMAL]      = "#ffffff"
+  base[PRELIGHT]    = "#ffffff"
+  base[ACTIVE]      = "#3399FF"
+  base[SELECTED]    = "#3399FF"
+  base[INSENSITIVE] = "#f5f5f5"
+
+  bg[NORMAL]        = "#ffffff"
+  bg[PRELIGHT]      = "#ffffff"
+  bg[ACTIVE]        = "#3399FF"
+  bg[SELECTED]      = "#3399FF"
+  bg[INSENSITIVE]   = "#f0f0f0"
+
+  text[NORMAL]      = "#000000"
+  text[PRELIGHT]    = "#000000"
+  text[ACTIVE]      = "#ffffff"
+  text[SELECTED]    = "#ffffff"
+  text[INSENSITIVE] = "#9a9a9a"
+
+  fg[NORMAL]        = "#000000"
+  fg[PRELIGHT]      = "#000000"
+  fg[ACTIVE]        = "#ffffff"
+  fg[SELECTED]      = "#ffffff"
+  fg[INSENSITIVE]   = "#9a9a9a"
+
+  engine ""
+  {
+  }
+}
+
+# Apply to GTK2 file chooser path buttons
+widget_class "*GtkFileChooserDialog*GtkButton*"       style "fc_path_button"
+widget_class "*GtkFileChooserDialog*GtkToggleButton*" style "fc_path_button"
+widget_class "*GtkFileChooserDefault*GtkButton*"      style "fc_path_button"
+widget_class "*GtkFileChooserDefault*GtkToggleButton*" style "fc_path_button"
+
+# Apply to the file/folder lists in GTK2 file chooser
+widget_class "*GtkFileChooserDialog*GtkTreeView*"     style "fc_flat_treeview"
+widget_class "*GtkFileChooserDefault*GtkTreeView*"    style "fc_flat_treeview"
