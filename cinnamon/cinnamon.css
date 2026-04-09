@@ -3458,17 +3458,16 @@ StScrollBar StButton#hhandle:hover {
 }
 
 /* ==========================================================
- * CinnVIIStarkMenu - patch de correção
- * Carregar depois do overlay Win7/Aero do StarkMenu
+ * CinnVIIStarkMenu
  * ========================================================== */
 
 /* -----------------------------
- * New visual
+ * Base structure
  * ----------------------------- */
 .starkmenu-background {
   padding: 0;
-  border-image: none;
   border: 1px solid rgba(84, 112, 145, 0.95);
+  border-image: none;
   border-radius: 8px;
   background-color: rgba(236, 242, 249, 0.98);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
@@ -3486,7 +3485,7 @@ StScrollBar StButton#hhandle:hover {
   box-shadow: none;
 }
 
-/* Add a much needed extra margin on the right panel options */
+/* Extra right margin for the right-side panel items */
 .menu-category-button.starkmenu-quicklink-button,
 .menu-category-button-selected.starkmenu-quicklink-button-selected {
     margin-right: 8px;
@@ -3499,11 +3498,7 @@ StScrollBar StButton#hhandle:hover {
 .starkmenu-favorites-box .popup-menu-item:selected,
 .starkmenu-favorites-box .popup-menu-item:focus,
 .starkmenu-favorites-box StButton:hover,
-.starkmenu-favorites-box StButton:focus {
-  color: #0d1a26;
-  text-shadow: none;
-}
-
+.starkmenu-favorites-box StButton:focus,
 .starkmenu-favorites-box .popup-menu-item:hover StLabel,
 .starkmenu-favorites-box .popup-menu-item:selected StLabel,
 .starkmenu-favorites-box .popup-menu-item:focus StLabel,
@@ -3513,7 +3508,7 @@ StScrollBar StButton#hhandle:hover {
   text-shadow: none;
 }
 
-/* mantém o ícone com peso no hover */
+/* Keep icon emphasis on hover/focus */
 .starkmenu-favorites-box .popup-menu-item:hover StIcon,
 .starkmenu-favorites-box .popup-menu-item:selected StIcon,
 .starkmenu-favorites-box .popup-menu-item:focus StIcon,
@@ -3522,6 +3517,39 @@ StScrollBar StButton#hhandle:hover {
   color: #eef5fc;
   opacity: 1;
   icon-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+}
+
+/* -----------------------------
+ * Search
+ * ----------------------------- */
+
+.starkmenu-favorites-box #menu-search-entry {
+  min-height: 20px;
+  color: #22384e;
+  background-color: #ffffff;
+
+  border: 1px solid #9eb6ce;
+  border-radius: 4px;
+
+  caret-color: #22384e;
+  selected-color: #ffffff;
+  selection-background-color: #3d7cc9;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.starkmenu-favorites-box #menu-search-entry:focus {
+  border: 1px solid #6ea6de;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(170, 210, 245, 0.9);
+}
+
+.starkmenu-favorites-box .menu-search-entry-icon {
+  icon-size: 18px;
+  color: #5b6f84;
 }
 
 /* -----------------------------
