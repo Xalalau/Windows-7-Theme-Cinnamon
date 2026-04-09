@@ -3173,21 +3173,6 @@ https://github.com/linuxmint/cinnamon-spices-applets
     background-color: rgba(78, 132, 203, 0.42);
 }
 
-/* ===================================================================
-* CinnVIIStarkMenu
-* ===================================================================*/
-
-/* Fix menu tilting due to a single pixel missing in the border below */
-.hover-icon {
-  border: 7px solid transparent;
-}
-
-/* Add a much needed extra margin on the right panel options */
-.menu-category-button.starkmenu-quicklink-button,
-.menu-category-button-selected.starkmenu-quicklink-button-selected {
-    margin-right: 8px;
-}
-
 /* ==========================================================
  * Win7/Aero-ish skin for Cinnamon appmenu
  * ========================================================== */
@@ -3475,4 +3460,110 @@ StScrollBar StButton#hhandle {
 StScrollBar StButton#vhandle:hover,
 StScrollBar StButton#hhandle:hover {
   background-color: rgba(95, 120, 150, 0.85);
+}
+
+/* ==========================================================
+ * CinnVIIStarkMenu - patch de correção
+ * Carregar depois do overlay Win7/Aero do StarkMenu
+ * ========================================================== */
+
+/* -----------------------------
+ * New visual
+ * ----------------------------- */
+.starkmenu-background {
+  padding: 0;
+  border-image: none;
+  border: 1px solid rgba(84, 112, 145, 0.95);
+  border-radius: 8px;
+  background-color: rgba(236, 242, 249, 0.98);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.starkmenu-background .popup-menu-content {
+  padding: 0;
+  background-color: transparent;
+}
+
+.starkmenu-selected-app-box,
+.starkmenu-applications-inner-box {
+  background-color: rgba(236, 242, 249, 0.98);
+  background-gradient-direction: none;
+  box-shadow: none;
+}
+
+/* Add a much needed extra margin on the right panel options */
+.menu-category-button.starkmenu-quicklink-button,
+.menu-category-button-selected.starkmenu-quicklink-button-selected {
+    margin-right: 8px;
+}
+
+/* -----------------------------
+ * Favorites
+ * ----------------------------- */
+.starkmenu-favorites-box .popup-menu-item:hover,
+.starkmenu-favorites-box .popup-menu-item:selected,
+.starkmenu-favorites-box .popup-menu-item:focus,
+.starkmenu-favorites-box StButton:hover,
+.starkmenu-favorites-box StButton:focus {
+  color: #0d1a26;
+  text-shadow: none;
+}
+
+.starkmenu-favorites-box .popup-menu-item:hover StLabel,
+.starkmenu-favorites-box .popup-menu-item:selected StLabel,
+.starkmenu-favorites-box .popup-menu-item:focus StLabel,
+.starkmenu-favorites-box StButton:hover StLabel,
+.starkmenu-favorites-box StButton:focus StLabel {
+  color: #0d1a26;
+  text-shadow: none;
+}
+
+/* mantém o ícone com peso no hover */
+.starkmenu-favorites-box .popup-menu-item:hover StIcon,
+.starkmenu-favorites-box .popup-menu-item:selected StIcon,
+.starkmenu-favorites-box .popup-menu-item:focus StIcon,
+.starkmenu-favorites-box StButton:hover StIcon,
+.starkmenu-favorites-box StButton:focus StIcon {
+  color: #eef5fc;
+  opacity: 1;
+  icon-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+}
+
+/* -----------------------------
+ * Right buttons box
+ * ----------------------------- */
+.right-buttons-box,
+.right-buttons-box StLabel,
+.right-buttons-box StIcon,
+.right-buttons-box .popup-menu-item,
+.right-buttons-box StButton {
+  color: #5e6b78;
+  text-shadow: none;
+}
+
+.right-buttons-box .popup-menu-item StIcon,
+.right-buttons-box StButton StIcon {
+  color: #5b6f84;
+}
+
+.right-buttons-box .popup-menu-item:hover,
+.right-buttons-box .popup-menu-item:selected,
+.right-buttons-box .popup-menu-item:focus,
+.right-buttons-box StButton:hover,
+.right-buttons-box StButton:focus,
+.right-buttons-box .popup-menu-item:hover StLabel,
+.right-buttons-box .popup-menu-item:selected StLabel,
+.right-buttons-box .popup-menu-item:focus StLabel,
+.right-buttons-box StButton:hover StLabel,
+.right-buttons-box StButton:focus StLabel {
+  color: #22384e;
+  text-shadow: none;
+}
+
+.right-buttons-box .popup-menu-item:hover StIcon,
+.right-buttons-box .popup-menu-item:selected StIcon,
+.right-buttons-box .popup-menu-item:focus StIcon,
+.right-buttons-box StButton:hover StIcon,
+.right-buttons-box StButton:focus StIcon {
+  color: #36506b;
 }
