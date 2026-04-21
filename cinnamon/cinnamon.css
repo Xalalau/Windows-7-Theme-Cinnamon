@@ -316,6 +316,22 @@ background: url('handle-vert.png') no-repeat center center;
   border-image: none;
 }
 
+#panelLeft .applet-box:first-child {
+  background: url("orbs/OBB1.png");
+  border-image: none;
+  background-position: center center;
+  transition-duration: 300;
+  width: 40px;
+  color: rgba(255,0,0,0) !important;
+}
+#panelLeft .applet-box:first-child:hover {
+  transition-duration: 200; background: url("orbs/OBB2.png");
+  border-image: none;
+}
+#panelLeft .applet-box:first-child:active {
+  background: url("orbs/OBB3.png");
+  border-image: none;
+}
 
 #panelLeft:dnd {
   background-gradient-direction: vertical;
